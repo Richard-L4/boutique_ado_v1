@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
-    'checkout',	
+    'checkout',
+    'profiles',
 
     # Other
     'crispy_forms',
@@ -183,7 +184,7 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-
+DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
