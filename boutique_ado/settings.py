@@ -28,7 +28,7 @@ DEBUG = os.environ.get("DEVELOPMENT") == "1"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
