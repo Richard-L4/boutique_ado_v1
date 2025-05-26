@@ -30,10 +30,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', # local host
-    'localhost', # listen for stripe webhooks
-    'boutique-f75dd315bd84.herokuapp.com',
+    '127.0.0.1',
+    'localhost',
+    'beautique-app-7ccbd0847941.herokuapp.com',
 ]
+
 
 
 # Application definition
