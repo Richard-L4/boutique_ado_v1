@@ -134,17 +134,28 @@
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+$(document).ready(function() {
+  $('.remove-item').click(function(e) {
+    e.preventDefault();
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+    var csrfToken = '{{ csrf_token }}';  // Make sure this is in your template context
+    var itemId = $(this).data('item-id');
+    var size = $(this).data('product_size') || '';
+
+    var url = `/bag/remove/${itemId}/`;
+
+    $.post(url, {
+      'csrfmiddlewaretoken': csrfToken,
+      'product_size': size
+    }).done(function() {
+      location.reload();
+    }).fail(function() {
+      alert('Failed to remove item.');
+    });
+  });
+});
+
+
 </script>
+
 {% endblock %}

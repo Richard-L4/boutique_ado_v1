@@ -51,12 +51,10 @@
 <a class="update-link text-info"><small>Update</small></a>
 
 <a
+  href="#"
   class="remove-item text-danger float-right"
-  data-item_id="{{ item.item_id }}"
-  data-product_size="{{ item.size }}"
+  data-item-id="{{ item.item_id }}"
+  data-product_size="{{ item.size|default:'' }}"
 >
   <small>Remove</small>
 </a>
-
-
-
