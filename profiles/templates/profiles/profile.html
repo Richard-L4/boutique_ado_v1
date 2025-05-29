@@ -70,12 +70,14 @@
                             {% endfor %}
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
+                </div> <!-- closes order-history -->
+            </div> <!-- closes col-12 col-lg-6 -->
+        </div> <!-- closes row -->
+    </div> <!-- closes container -->
 {% endblock %}
+
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
